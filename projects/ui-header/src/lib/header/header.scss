@@ -1,0 +1,60 @@
+.ui-header {
+  background: #0f172a;
+  color: #fff;
+  padding: 1rem;
+}
+
+.ui-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.ui-tab {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ui-dropdown {
+  position: relative;
+
+  .dropdown-label {
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #1e293b;
+    padding: 1rem;
+    min-width: 200px;
+    border-radius: 8px;
+  }
+
+  &:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-section {
+    margin-bottom: 1rem;
+
+    h4 {
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 0.25rem 0;
+      }
+
+      a {
+        color: #cbd5e1;
+        text-decoration: none;
+      }
+    }
+  }
+}

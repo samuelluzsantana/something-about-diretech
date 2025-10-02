@@ -1,0 +1,26 @@
+<header class="ui-header">
+  <nav class="ui-nav">
+    <ng-container *ngFor="let tab of data?.navigation?.tabs">
+      <!-- Tab simples -->
+      <a *ngIf="tab.type === 'tab'" [href]="tab.href" class="ui-tab">
+        {{ tab.name }}
+      </a>
+
+      <!-- Dropdown -->
+      <div *ngIf="tab.type === 'dropdown'" class="ui-dropdown">
+        <span class="dropdown-label">{{ tab.name }}</span>
+
+        <div class="dropdown-content">
+          <div *ngFor="let section of tab.sections" class="dropdown-section">
+            <h4>{{ section.title }}</h4>
+            <ul>
+              <li *ngFor="let link of section.links">
+                <a [href]="link.href">{{ link.label }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </nav>
+</header>
